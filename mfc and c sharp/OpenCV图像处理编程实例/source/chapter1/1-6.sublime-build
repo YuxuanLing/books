@@ -1,0 +1,34 @@
+// 功能：代码1-6  设置my_ opencv.sublime-build
+// 作者：朱伟 zhu1988wei@163.com
+// 来源：《OpenCV图像处理编程实例》
+// 博客：http://blog.csdn.net/zhuwei1988
+// 更新：2016-8-1
+// 说明：版权所有，引用或摘录请联系作者，并按照上面格式注明出处，谢谢。
+{
+	"cmd": ["g++", "${file}", "-o",
+   "${file_path}/${file_base_name}","-I",
+   "D:/Program Files/opencv2.4.4/opencv/build/include",
+	"-I","D:/ProgramFiles/opencv2.4.4/opencv/build/
+    include/opencv","-I","D:/Program Files/opencv2.4.4/
+    opencv/build/include/opencv2","-L", 
+   "D:/Program Files/opencv2.4.4/opencv/build/
+   x86/mingw/lib",
+
+	"-l", "opencv_core244", "-l", "opencv_imgproc244",
+   "-l", "opencv_calib3d244","-l", "opencv_video244", 
+   "-l", "opencv_features2d244", "-l", "opencv_ml244", "-l",
+   "opencv_highgui244","-l", "opencv_objdetect244", "-l", 
+   "opencv_legacy244",  "-l", "opencv_flann244"], 
+
+	"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+	"working_dir": "${file_path}",
+	"selector": "source.c, source.c++, source.cpp",
+	"encoding": "gbk",
+	"variants":
+	[
+		{
+			"name": "Run",
+			"cmd" : ["${file_path}/${file_base_name}"]
+		}
+	]
+}

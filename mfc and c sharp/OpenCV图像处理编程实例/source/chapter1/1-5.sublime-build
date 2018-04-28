@@ -1,0 +1,20 @@
+// 功能：代码1-5  设置my_C++.sublime-build
+// 作者：朱伟 zhu1988wei@163.com
+// 来源：《OpenCV图像处理编程实例》
+// 博客：http://blog.csdn.net/zhuwei1988
+// 更新：2016-8-1
+// 说明：版权所有，引用或摘录请联系作者，并按照上面格式注明出处，谢谢。
+{
+     "cmd": ["g++", "${file}", "-o", 
+           "${file_path}/${file_base_name}"],  
+    "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+     "working_dir": "${file_path}",
+     "selector": "source.c, source.cpp,source.c++",
+     "variants":
+     [
+          {
+               "name": "Run",
+               "cmd" : ["${file_path}/${file_base_name}"]
+          }
+     ]
+}
